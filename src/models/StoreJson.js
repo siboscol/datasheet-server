@@ -1,7 +1,8 @@
 import fs from 'mz/fs'
+import os from 'os'
 import errors from '../lib/errors'
 
-const STORAGE_DIRNAME = 'data'
+const STORAGE_DIRNAME = os.tmpdir()
 
 function partsFromFilename (fname) {
   const body = fname.slice(0, -5)
